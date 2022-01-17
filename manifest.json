@@ -7,5 +7,6 @@
       "matches": ["<all_urls>"],
       "js": ["index.js"]
     }
-  ]
+  ],
+  "icons": { "16": "./Icons/disable16.png", "48": "./Icons/disable48.png", "128": "./Icons/disable128.png" }
 }
