@@ -1,5 +1,6 @@
 switch(window.location.hostname){
     case "www.youtube.com":
+        document.body.innerHTML="<button> Click Here</button>"
         alert("you are in youtube");
     break;
     case "www.facebook.com":
