@@ -251,29 +251,33 @@ const generateHTML = (pageName) => {
      `;
 };
 
-switch (window.location.hostname || location.protocol !== "https:") {
+switch (window.location.hostname ) {
+    case location.protocol !== "https:":
+        document.head.innerHTML = generateSTYLES();
+        document.body.innerHTML = generateHTML("WEB SITE NOT SECURE");
+        break;
   case "www.youtube.com":
     document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("YOUTUBE");
+    document.body.innerHTML = generateHTML("YOUTUBE IS BLOCKED");
     break;
   case "www.facebook.com":
     document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("FACEBOOK");
+    document.body.innerHTML = generateHTML("FACEBOOK IS BLOCKED");
     break;
   case "www.netflix.com":
     document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("NETFLIX");
+    document.body.innerHTML = generateHTML("NETFLIX IS BLOCKED");
     break;
   case "www.instagram.com":
     document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("INSTAGRAM");
+    document.body.innerHTML = generateHTML("INSTAGRAM IS BLOCKED");
     break;
   case "discord.com":
     document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("DISCORD");
+    document.body.innerHTML = generateHTML("DISCORD IS BLOCKED");
     break;
   case "www.spotify.com":
     document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("SPOTIFY");
+    document.body.innerHTML = generateHTML("SPOTIFY IS BLOCKED");
     break;
 }
