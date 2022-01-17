@@ -1,5 +1,5 @@
 const generateSTYLES = () => {
-    return `<style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
+  return `<style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
     body {
       background: #33cc99;
       color: #fff;
@@ -229,10 +229,10 @@ const generateSTYLES = () => {
       }
     }
      </style>`;
-  };
-  
-  const generateHTML = (pageName) => {
-    return `
+};
+
+const generateHTML = (pageName) => {
+  return `
      
      <div id="clouds">
         <div class="cloud x1"></div>
@@ -249,16 +249,31 @@ const generateSTYLES = () => {
         <div class='_2'>STUDYING > ${pageName}</div>
     </div>
      `;
-  };
-  
-switch (window.location.hostname || location.protocol !== 'https:') {
-    case  location.protocol !== 'https:':
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("UNTRUSTED WEBSITE");
-    break;  
-  case "www.facebook.com" && location.protocol === 'https:':
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("FACEBOOK IS BLOCKED");
-    break;
+};
 
+switch (window.location.hostname || location.protocol !== "https:") {
+  case "www.youtube.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("YOUTUBE");
+    break;
+  case "www.facebook.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("FACEBOOK");
+    break;
+  case "www.netflix.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("NETFLIX");
+    break;
+  case "www.instagram.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("INSTAGRAM");
+    break;
+  case "discord.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("DISCORD");
+    break;
+  case "www.spotify.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("SPOTIFY");
+    break;
 }
